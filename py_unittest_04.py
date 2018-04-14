@@ -6,17 +6,17 @@ from unittest import main
 
 
 def func_1():
-    func_2()
+    return 'Hello ' + func_2()
 
 
 def func_2():
-    print("It's func 2!")
+    return 'Hello'
 
 
 def test_func_1():
-    with patch('func_2') as mocked_func_2:
-        func_1()
-        mocked_func_2.assert_called_once()
+    with patch('func_2', return_value='World!'):
+        assert func_1() == 'Hello World!'
+
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 from unittest import main
-from person import person
+from person import Person
 
 
 class FuncTest(TestCase):
@@ -14,10 +14,8 @@ class FuncTest(TestCase):
             mocked_input.side_effect = ('Jo', 'Lee')
             with patch('builtins.print') as mocked_print:
 
-                # with patch.object(person.Person, "fake_func") as mocked_fake_func:
-                from person import person
-                with patch('person.Person.fake_func') as mocked_fake_func:
-                    john = person.Person('John')
+                with patch.object(Person, "fake_func") as mocked_fake_func:
+                    john = Person('John')
                     john.print_parents()
                     mocked_print.assert_called_with("John's parents are Jo and Lee.")
                     mocked_fake_func.assert_called_once()
