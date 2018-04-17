@@ -17,4 +17,7 @@ class Person(object):
 
     def fake_func(self):
         pass
+    
+    def print_sth(self):
+        print("I'm here!")
 
