@@ -21,11 +21,8 @@ class Const(object):
 
         self.__dict__[name] = value
 
-# import sys
-# sys.modules[__name__] = _const()
-# import const
 const = Const()
 
-const.MY_CONSTANT = 1
-const.MY_SECOND_CONSTANT = 2
+const.MY_CONSTANT = "SAMPLE_STRING_01"
+const.MY_SECOND_CONSTANT = "SAMPLE_STRING_02"
 
