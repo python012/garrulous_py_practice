@@ -379,7 +379,7 @@ a.popup_link:hover {
 #total_row  { font-weight: bold; }
 .passClass  { background-color: #6c6; }
 .failClass  { background-color: #c60; }
-.errorClass { background-color: #c00; }
+.errorClass { background-color: #c00; color: white; }
 .passCase   { color: #6c6; }
 .failCase   { color: #c60; font-weight: bold; }
 .errorCase  { color: #c00; font-weight: bold; }

@@ -76,7 +76,7 @@ a.popup_link:hover {
 #total_row  { font-weight: bold; }
 .passClass  { background-color: #6c6; }
 .failClass  { background-color: #c60; }
-.errorClass { background-color: #c00; }
+.errorClass { background-color: #c00; color: white; }
 .passCase   { color: #6c6; }
 .failCase   { color: #c60; font-weight: bold; }
 .errorCase  { color: #c00; font-weight: bold; }
@@ -189,7 +189,7 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>My unit test</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-21 10:00:00</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-21 10:20:08</p>
 <p class='attribute'><strong>Duration:</strong> 0:00:00.002000</p>
 <p class='attribute'><strong>Status:</strong> Pass 3 Failure 1 Error 1</p>
 
@@ -246,7 +246,7 @@ function showOutput(id, name) {
         <pre>
         
 ft1.1: Traceback (most recent call last):
-  File "unittest_with_runner\unit_test.py", line 25, in test_error
+  File "unit_test.py", line 25, in test_error
     raise ValueError
 ValueError
 
@@ -274,7 +274,7 @@ ValueError
         <pre>
         
 ft1.2: Traceback (most recent call last):
-  File "unittest_with_runner\unit_test.py", line 29, in test_fail
+  File "unit_test.py", line 29, in test_fail
     self.assertEqual(1, 2)
 AssertionError: 1 != 2
 
