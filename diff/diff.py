@@ -9,7 +9,7 @@ try:
     print("text_file_2: " + text_file_2)
 except Exception as e:
     print("Error: " + str(e))
-    print("1Usage: diff.py file_name1 file_name2")
+    print("Usage: diff.py file_name1 file_name2")
     sys.exit()
 
 def read_file(filename):
@@ -23,7 +23,7 @@ def read_file(filename):
         sys.exit()
 
 if text_file_1 == "" or text_file_2 == "":
-    print("2Usage: diff.py file_name1 file_name2")
+    print("Usage: diff.py file_name1 file_name2")
     sys.exit()
 
 text1_lines = read_file(text_file_1)
@@ -33,4 +33,4 @@ d = difflib.HtmlDiff()
 
 diff_result_html = open('diff_result.html', 'w', encoding='utf-8')
 diff_result_html.write(d.make_file(text1_lines, text2_lines))
-# webbrowser.open("www.baidu.com")
+webbrowser.open('diff_result.html')
